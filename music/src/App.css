@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: gray;
+}
+
+.statement { 
+  font-size: 30px;
+  font-family: 'Arial Narrow Bold';
+  font-style: italic;
+}
+
+.hero { 
+  display: flex; 
+  color: white;
+  min-height: 500px;
+  text-align: center; 
+  flex-wrap: wrap;  
+  align-items: center; 
+  justify-content: center; 
+  background-image: url("guitarbackground.jpg");
+  background-size: contain;
+  margin-bottom: -20px;
+}
+
+.heroline {
+  background-color: red;
+  border-color: red
+}
+
+.topnav { 
+  overflow: hidden; 
+  background-color: #a80303;
+  font-size: 20px;
+  border-bottom: 5px solid white;
+}    
+
+.topnav p {
+  float: left; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 10px 14px; 
+  font-size: 16px; 
+  font-family: Impact;
+  min-width: 100px;
+}
+.topnav a { 
+  float: inline-end; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 25px 14px; 
+  font-family: Courier;
+  font-size: 16px; 
+  min-width: 100px; }     
+  
+  .topnav a:hover { 
+    background-color: #800303; 
+  }
+
+  .mainbox {
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    max-width: 750px;
+    border-top: 7px solid red;
+    margin-left: 25%;
+  }
+
+  .descheader {
+    text-align: left;
+    font-family: 'Lucida Sans';
+    margin-left: 50px;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    display: flex;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 25px;
+    max-width: 350px;
+  }
+
+  .entrybox {
+    border: 5px lightblue solid;
+    margin-top: 25px;
+    min-width: 300px;
+    min-height: 250px;
+    margin-left: 100px;
+  }
+
+  .entryboxheader{
+    font-family: sans-serif;
+  }
+
+  .submit {
+    background-color: red;
+    border: 0px;
+    color: white;
+    min-width: 150px;
+  }
+
+  .songlist {
+    min-width: 250px;
+    margin-left: 75px;
+    margin-top: 100px;
+    table-layout:fixed;
+    text-align:left;
+  }
+
+  .header {
+    table-layout: fixed;
+    background-color: red;
+    text-align: left;
+    width: 300px;
+  }
+
+  .ratingheader {
+    background-color: red;
+  }
+
+  .footer {
+    margin-top: 250px;
+    min-width: 750px;
+    min-height: 350px;
+    background-color: rgb(39, 39, 39);
+    align-items: center;
+  }
+
+  .referencesheader {
+    color: rgb(75, 23, 124);
+    font-family:'Franklin Gothic Medium';
+    font-size: 50px;
+    margin-top: 100px;
+  }
+
+  .references {
+    color: white;
+  }
