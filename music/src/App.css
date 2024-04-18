@@ -139,3 +139,56 @@ body {
   .references {
     color: white;
   }
+
+  .about {
+    display: flex;
+    text-align: center;
+    margin-left: -50px;
+    margin-top: 25px;
+  }
+  .tech {
+    display: flex;
+    text-align: center;
+    margin-left: -50px;
+    margin-top: -25px;
+    font-size: 20px;
+  }
+  .contactform {
+    margin-top: -40px;
+  }
+  .aboutbox {
+    text-align: center;
+    font-family: 'Gill Sans';
+    margin-left: 225px;
+    margin-bottom: 5px;
+  }
+  .contactbox {
+    text-align: center;
+    font-family: 'Gill Sans';
+    margin-left: 225px;
+    margin-bottom: 5px;
+  }
+  .loginbox {
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    max-width: 750px;
+    border: 7px solid red;
+    min-height: 682px;
+    margin-left: 25%;
+  }
+  .login {
+    text-align: center;
+    font-family: 'Gill Sans';
+    margin-left: 225px;
+    margin-top: 250px;
+  }
+  .emailForm{
+    margin-bottom: 10px;
+  }
+  .passwordText{
+    margin-left: -23px;
+  }
+  .passwordForm{
+    margin-bottom: 10px;
+  }

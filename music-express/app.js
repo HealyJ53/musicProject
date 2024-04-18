@@ -4,15 +4,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const router = express.Router();
+var cors = require('cors');
 
 var musicRouter = require('./routes/contact');
 var contactRouter = require('./routes/music');
-
 var app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/music');
+mongoose.connect('mongodb://localhost:27017/');
 const db = mongoose.connection;
+
+// CORS
+const corsOptions = {
+  origin: process.env.REACT_URI,
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
