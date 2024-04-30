@@ -8,18 +8,19 @@ var cors = require('cors');
 
 var musicRouter = require('./routes/contact');
 var contactRouter = require('./routes/music');
+var userRouter = require('./routes/user');
 var app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/');
-const db = mongoose.connection;
+const db = mongoose.createConnection('mongodb://localhost:27017/');
 
-// CORS
+//CORS
 const corsOptions = {
-  origin: process.env.REACT_URI,
+  origin: '*',
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions))
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', musicRouter);
 app.use('/', contactRouter);
+app.use('/', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

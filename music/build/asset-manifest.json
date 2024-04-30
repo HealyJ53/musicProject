@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.964eb2d5.css",
+    "main.js": "/static/js/main.da875cbc.js",
+    "static/js/453.6f2e229a.chunk.js": "/static/js/453.6f2e229a.chunk.js",
+    "static/media/herobackground.jpg": "/static/media/herobackground.6015d5cac67615f47abf.jpg",
+    "static/media/treblebackground.jpg": "/static/media/treblebackground.278f3768a7702ce373f3.jpg",
+    "index.html": "/index.html",
+    "main.964eb2d5.css.map": "/static/css/main.964eb2d5.css.map",
+    "main.da875cbc.js.map": "/static/js/main.da875cbc.js.map",
+    "453.6f2e229a.chunk.js.map": "/static/js/453.6f2e229a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964eb2d5.css",
+    "static/js/main.da875cbc.js"
+  ]
+}

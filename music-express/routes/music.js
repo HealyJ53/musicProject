@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/music');
+mongoose.connect('mongodb://localhost:27017/musicProject');
 const db = mongoose.connection;
 
 const musicSchema = new mongoose.Schema({
@@ -25,7 +25,7 @@ router.get("/musicProject", async (req, res) =>{
 // POST new music
 router.post("/musicProject", async (req, res) =>{
 
-  const {desc} = req.body;
+  const desc = req.body;
 
   const song = new musicModel({desc});
   try {

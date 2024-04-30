@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/music');
+mongoose.connect('mongodb://localhost:27017/musicProject');
 const db = mongoose.connection;
 
 const contactSchema = new mongoose.Schema({

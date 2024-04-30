@@ -2,6 +2,34 @@ import React from 'react';
 import '../App.css';
 
 const Home = () => {
+  const handleSong = async (event) => {
+    const formData = new FormData(event.target);
+    let song = formData.get("song");
+    let rating = formData.get("rating");
+    if (!containsNumber(rating))
+    {
+      alert("ERROR: Rating should be a number.");
+    }
+    else{
+      fetch(`http://localhost:3000/musicProject`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(song, rating)
+    }).then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    }).catch(e => {
+        console.error(e);
+    });
+    }
+  };
+  function containsNumber(str) {
+    return /[0-9]/.test(str);
+  };
   return (
     <div className="App">
       <>
@@ -30,11 +58,13 @@ const Home = () => {
     </div>
     <div className="entrybox">
     <h2 className="entryboxheader"> Song Entry Box </h2>
-    <textarea placeholder="Song Name"></textarea>
+    <form onSubmit={handleSong}>
+    <input type="text" placeholder="Song Name" name="song" id="song" />
     <br /> <br />
     <button type="submit" className="submit"> Submit </button>
     <br /> <br />
-    <textarea placeholder="Rating 1-10"></textarea>
+    <input type="text" placeholder="Rating 1-10" name="rating" id="rating" />
+    </form>
     </div>
     <div className="songlist">
       <table className="songtable">
@@ -50,8 +80,6 @@ const Home = () => {
       </table>
     </div>
     <div className="footer">
-      <p className="referencesheader"> References </p>
-      <p className="references"> temporary references </p>
     </div>
   </div>
     </>

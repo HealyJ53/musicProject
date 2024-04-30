@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Login from './Components/Login';
+import CreateAccount from './Components/CreateAccount'
 {/*
     Author: Jack Healy
     School Name: healyj53
@@ -35,6 +36,13 @@ const App = () => {
       <>
       <Contact />
       </>
+      )
+    }
+    else if (window.location.pathname == '/create'){
+      return (
+        <>
+        <CreateAccount />
+        </>
       )
     }
     else{
